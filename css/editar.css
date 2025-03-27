@@ -1,0 +1,22 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#caixa {
+    padding: 10px;
+    height: 364px;
+}
+#boxTable {
+    border: 1px solid #80808063;
+    overflow-y:auto ;
+    /* height: 100%; */
+    padding: 8px;
+ }
+
+ #novoItem {
+    display: flex;
+    justify-content: end;
+    margin: 10px;
+ }
