@@ -37,15 +37,16 @@
         return executar($sql);
     }
 
-    function edit($tabela, array $dados, $condicao) {
+    function atualizar($tabela, array $dados, $condicao) {
         foreach( $dados AS $chaves => $valores) {
-            $campo[] = "{$dados} = {$valores} ";
+            $campos[] = "{$chaves} = '{$valores}' ";
         }
-        $campo = implode(",", $campo);
-        $sql = "UPDATE {$tabela} SET $campo WHERE $condicao";
+        $campos = implode(",",  $campos);
+        $sql = "UPDATE {$tabela} SET {$campos} WHERE {$condicao}";
 
         return executar($sql);
     }
+
 
     function delete($tabela, $condicao){
         $sql = "DELETE FROM $tabela WHERE $condicao";

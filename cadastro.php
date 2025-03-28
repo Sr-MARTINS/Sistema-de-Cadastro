@@ -17,9 +17,6 @@
 
         $dados = array (
             "id_cliente" => "$id_cliente",
-            "id_cliente"
-             => "$id_cliente",
-            "id_cliente" => "$id_cliente",
             "nome"       => "$nome",
             "email"      => "$email",
             "telefone"   => "$telefone",
@@ -51,14 +48,13 @@
                 <input type="text" name="email" value="<?php echo @$email ?>" >
                 
                 <label for="email">Telefone</label> 
-                <input type="number" name="telefone" value="<?php echo @$nome ?>">
+                <input type="number" name="telefone" value="<?php echo @$telefone ?>">
 
-                <input type="test" name="acao" value="<?php if($acao == "") echo "Cadastrar"; else echo $acao ?>">
-                <input type="test" name="id" value="<?php echo @$id ?>">
+                <input type="hidden" name="acao" value="<?php if($acao == "") echo "Cadastrar"; else echo $acao ?>">
+                <input type="hidden" name="id" value="<?php echo @$id ?>">
         </div> 
         <div id="buttns">
-            <input type="submit" name="btEnviar" class="btn btn-success" 
-                value="<?php if($acao == "") echo "Cadastrar"; else echo $acao ?>" >
+            <input type="submit" class="btn btn-success" value="<?php if($acao == "") echo "Cadastrar"; else echo $acao ?>" >
 
             <input type="reset" name="Reset" class="btn btn-secondary">
         </div>

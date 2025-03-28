@@ -47,7 +47,7 @@
                         <td><?php echo $cliente["telefone"] ?></td>
                         <td>
                         <a href="index.php?link=2&acao=Editar&id=<?php echo $cliente["id_cliente"] ?>">Editar</a> / 
-                        <a href="index.php?link=3&acao=Excluir&id=<?php echo $cliente["id_cliente"] ?>">Excluir</a></td>
+                        <a href="index.php?link=4&acao=Excluir&id=<?php echo $cliente["id_cliente"] ?>">Excluir</a></td>
                     </tr>
 
                 <?php } ?> 
