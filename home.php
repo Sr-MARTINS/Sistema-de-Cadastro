@@ -14,28 +14,28 @@
         <div class="cont">
 
             <div class="btns">
-                <a href="home.php">
+                <a href="index.php?link=2">
                     <button>
                         <img src="img/pg1.png" alt="" >
                     </button>
                 </a>
             </div>
             <div class="btns">
-                <a href="editar.php">
+                <a href="index.php?link=3">
                     <button>
                         <img src="img/pg2.jpg" alt="">
                     </button>
                 </a>
             </div>
             <div class="btns">
-                <a href="deletar.php">
+                <a href="index.php?link=4">
                     <button>
                         <img src="img/pg3.jpg" alt="">
                     </button>
                 </a>
             </div>
             <div class="btns">
-                <a href="lista.php">
+                <a href="index.php?link=5">
                     <button>
                         <img src="img/pg4.png" alt="">
                     </button>

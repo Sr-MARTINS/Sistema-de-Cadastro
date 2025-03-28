@@ -36,11 +36,11 @@
                 <h2>Menu</h2>
             </span>
             <ul>
-                <li class="option"><a href="index.php?link=1"> <i class="bi bi-house"></i>  Home</i> </a></li>
-                <li class="option"><a href="index.php?link=2"> <i class="bi bi-journals"></i>Novo Cadastro</a></li>
-                <li class="option"><a href="index.php?link=3"> <i class="bi bi-pencil-square"></i>Alterar</a></li>
-                <li class="option"><a href="index.php?link=4"> <i class="bi bi-trash"></i> Deletar</a></li>
-                <li class="option"><a href="index.php?link=5"> <i class="bi bi-list-task"></i>Lista</a></li>
+                <li class="option"><a href="index.php?link=1"><i class="bi bi-house"></i>         Home </i></a>
+                <li class="option"><a href="index.php?link=2"><i class="bi bi-journals"></i>      Novo Cadastro</a>
+                <li class="option"><a href="index.php?link=3"><i class="bi bi-pencil-square"></i> Editar</a>
+                <li class="option"><a href="index.php?link=4"><i class="bi bi-trash"></i>         Deletar</a>
+                <li class="option"><a href="index.php?link=5"><i class="bi bi-list-task"></i>     Lista</a>
             </ul>  
         </div>
 
@@ -51,7 +51,7 @@
                 @$link = $_GET["link"];
 
                 $pag["1"] = "home.php";
-                $pag["2"] = "novoCadastro.php";
+                $pag["2"] = "cadastro.php";
                 $pag["3"] = "editar.php";
                 $pag["4"] = "deletar.php";
                 $pag["5"] = "lista.php";

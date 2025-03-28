@@ -1,6 +1,3 @@
-<?php
-    // require("crud.php");
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,33 +32,22 @@
                 </tr>
             </thead>
             <tbody>
+                <?php
+                    require_once("crud.php");
+
+                    $qyr = consultarTabela("cliente");
+                    while($cliente = mysqli_fetch_array($qyr)) {
+
+                ?>
                 <tr>
-                    <td>Martins</td>
-                    <td>martins@gmail.com</td>
-                    <td>98-989821231</td>
-                    <td><a href="#">Editar</a> / <a href="#">Excluir</a></td>
+                    <td><?php echo $cliente["id_cliente"]    ?> </td>
+                    <td><?php echo $cliente["nome"]    ?> </td>
+                    <td><?php echo $cliente["email"]   ?> </td>
+                    <td><?php echo $cliente["telefone"]?> </td>
+                    <td><a href="index.php?link=2&acao=Editar&id=<?php echo $cliente["id_cliente"] ?>">Editar</a>
+                    </td>
                 </tr>
-                <tr>
-                    <td>Martins</td>
-                    <td>martins@gmail.com</td>
-                    <td>98-989821231</td>
-                    <td><a href="#">Editar</a> / <a href="#">Excluir</a></td>
-                </tr>  <tr>
-                    <td>Martins</td>
-                    <td>martins@gmail.com</td>
-                    <td>98-989821231</td>
-                    <td><a href="#">Editar</a> / <a href="#">Excluir</a></td>
-                </tr>  <tr>
-                    <td>Martins</td>
-                    <td>martins@gmail.com</td>
-                    <td>98-989821231</td>
-                    <td><a href="#">Editar</a> / <a href="#">Excluir</a></td>
-                </tr>  <tr>
-                    <td>Martins</td>
-                    <td>martins@gmail.com</td>
-                    <td>98-989821231</td>
-                    <td><a href="#">Editar</a> / <a href="#">Excluir</a></td>
-                </tr>    
+                <?php } ?>     
             </tbody>
             </table>
         </div>

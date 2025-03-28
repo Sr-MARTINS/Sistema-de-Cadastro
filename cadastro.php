@@ -4,10 +4,11 @@
     @$acao = $_GET["acao"];
     @$id   = $_GET["id"];
 
+        //Acao edit
     if($acao != "") {
-
         $sql = "SELECT * FROM cliente WHERE id_cliente = $id";
         $qyr = executar($sql);
+        // $upp = atualizar("ciente", "id_cliente = $id");
         $linha = mysqli_fetch_array($qyr); 
 
         $id_cliente = $linha["id_cliente"];
@@ -35,7 +36,7 @@
     <link rel="stylesheet" href="css/novoCadastro.css">
 </head>
 <body>
-    <h2 style="margin:10px 0 0 20px">Enserir cadastro </h2>
+    <h2 style="margin:10px 0 0 20px">Fromulario de cadastro </h2>
     <hr>
 
     <div id="envep">

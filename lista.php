@@ -13,7 +13,7 @@
         </div>
     
     <div id="novoItem">
-           <a href="http://localhost/projetos/Cadastro/index.php?link=2">
+           <a href="index.php?link=2">
                 <button class="btn btn-success"> Novo Cadastro </button>
            </a>
     </div>

@@ -20,10 +20,13 @@
     if($acao == "Cadastrar") {
         $op = addItem("cliente", $dados);
     }
-    elseif($acao == "Editar") {
-        
+
+        //EDITAR
+    elseif($acao == "Editar") {    
         $op = atualizar("cliente", $dados, "id_cliente = $id");
     }
+
+        //EXCLUIR
     elseif($acao == "Excluir") {
         $op = deletar("cliente", $dados, "id_cliente = $id");
     }

@@ -1,13 +1,3 @@
-<?php
-    require_once("crud.php");
-
-    if(isset($_POST["btDelete"])) {
-        // $id_cliente = $_POST["id_cliente"];
-
-        $deletar = delete("cliente", "id_cliente = ") .$_POST["id_cliente"] ;
-    
-    }
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,24 +22,32 @@
             </thead>
             <tbody>
                 <?php
-                    $sql = "SELECT * FROM cliente";
-                    $qyr = executar($sql);
+                    require_once("crud.php");
 
+                    $qyr = consultarTabela("cliente");
+                    $id = $_GET["id"];
+
+                    if(isset($_POST["delt"])) {
+                        delete("cliente", "id_cliente = $id") ;
+                        header("Location:index.php?link=5");
+                    }
+                    
                     while($linha = mysqli_fetch_array($qyr)) {
                 ?>
                     <tr>
-                        <td><?php echo $linha["id_cliente"]  ?></td>
                         <td><?php echo $linha["nome"]  ?></td>
                         <td><?php echo $linha["email"] ?></td>
                         <td><?php echo $linha["telefone"]  ?></td>
                         <td>
                             <form method="POST">
-                                <input type="hidden" value="id_cliente" value="<?php echo $linha["id_cliente"] ?> ">
-                                <button type="submit" name="btDelete">Excluir</button>
+                                <input type="hidden" name="id_cliente" value="<?php echo $linha["id_cliente"] ?>">
+                                <a>
+                                   <input type="submit" name="delt" value="delete">
+                               </a> 
                             </form>
                         </td>
                     </tr>  
-                <?php } ?>
+                <?php }  ?>
                   
             </tbody>
             </table>
