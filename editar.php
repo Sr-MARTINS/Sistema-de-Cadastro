@@ -1,3 +1,6 @@
+<?php
+    // require("crud.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +10,17 @@
     <link rel="stylesheet" href="css/editar.css">
 </head>
 <body>
-    <h2 style="margin: .5rem 2rem;">Lista</h2>
+    <div style="display: flex; align-items: center; justify-content: space-between;">
+    <div >
+    <h2 style="margin: .5rem 2rem 0 2rem;">Editar</h2>
+    </div>
+    
+    <div id="novoItem">
+           <a href="#">
+                <button class="btn btn-success"> Novo Cadastro </button>
+           </a>
+    </div>
+    </div>
     <hr>
 
     <div id="caixa">
@@ -33,121 +46,6 @@
                     <td>martins@gmail.com</td>
                     <td>98-989821231</td>
                     <td><a href="#">Editar</a> / <a href="#">Excluir</a></td>
-                </tr>  
-                <tr>
-                    <td>Martins</td>
-                    <td>martins@gmail.com</td>
-                    <td>98-989821231</td>
-                    <td><a href="#">Editar</a> / <a href="#">Excluir</a></td>
-                </tr>  
-                <tr>
-                    <td>Martins</td>
-                    <td>martins@gmail.com</td>
-                    <td>98-989821231</td>
-                    <td><a href="#">Editar</a> / <a href="#">Excluir</a></td>
-                </tr>  
-                <tr>
-                    <td>Martins</td>
-                    <td>martins@gmail.com</td>
-                    <td>98-989821231</td>
-                    <td><a href="#">Editar</a> / <a href="#">Excluir</a></td>
-                </tr>  
-                <tr>
-                    <td>Martins</td>
-                    <td>martins@gmail.com</td>
-                    <td>98-989821231</td>
-                    <td><a href="#">Editar</a> / <a href="#">Excluir</a></td>
-                </tr>  
-                <tr>
-                    <td>Martins</td>
-                    <td>martins@gmail.com</td>
-                    <td>98-989821231</td>
-                    <td><a href="#">Editar</a> / <a href="#">Excluir</a></td>
-                </tr>  <tr>
-                    <td>Martins</td>
-                    <td>martins@gmail.com</td>
-                    <td>98-989821231</td>
-                    <td><a href="#">Editar</a> / <a href="#">Excluir</a></td>
-                </tr>  <tr>
-                    <td>Martins</td>
-                    <td>martins@gmail.com</td>
-                    <td>98-989821231</td>
-                    <td><a href="#">Editar</a> / <a href="#">Excluir</a></td>
-                </tr>  <tr>
-                    <td>Martins</td>
-                    <td>martins@gmail.com</td>
-                    <td>98-989821231</td>
-                    <td><a href="#">Editar</a> / <a href="#">Excluir</a></td>
-                </tr>  <tr>
-                    <td>Martins</td>
-                    <td>martins@gmail.com</td>
-                    <td>98-989821231</td>
-                    <td><a href="#">Editar</a> / <a href="#">Excluir</a></td>
-                </tr>  <tr>
-                    <td>Martins</td>
-                    <td>martins@gmail.com</td>
-                    <td>98-989821231</td>
-                    <td><a href="#">Editar</a> / <a href="#">Excluir</a></td>
-                </tr>  <tr>
-                    <td>Martins</td>
-                    <td>martins@gmail.com</td>
-                    <td>98-989821231</td>
-                    <td><a href="#">Editar</a> / <a href="#">Excluir</a></td>
-                </tr>  <tr>
-                    <td>Martins</td>
-                    <td>martins@gmail.com</td>
-                    <td>98-989821231</td>
-                    <td><a href="#">Editar</a> / <a href="#">Excluir</a></td>
-                </tr>  <tr>
-                    <td>Martins</td>
-                    <td>martins@gmail.com</td>
-                    <td>98-989821231</td>
-                    <td><a href="#">Editar</a> / <a href="#">Excluir</a></td>
-                </tr>  <tr>
-                    <td>Martins</td>
-                    <td>martins@gmail.com</td>
-                    <td>98-989821231</td>
-                    <td><a href="#">Editar</a> / <a href="#">Excluir</a></td>
-                </tr>  <tr>
-                    <td>Martins</td>
-                    <td>martins@gmail.com</td>
-                    <td>98-989821231</td>
-                    <td><a href="#">Editar</a> / <a href="#">Excluir</a></td>
-                </tr>  <tr>
-                    <td>Martins</td>
-                    <td>martins@gmail.com</td>
-                    <td>98-989821231</td>
-                    <td><a href="#">Editar</a> / <a href="#">Excluir</a></td>
-                </tr>  <tr>
-                    <td>Martins</td>
-                    <td>martins@gmail.com</td>
-                    <td>98-989821231</td>
-                    <td><a href="#">Editar</a> / <a href="#">Excluir</a></td>
-                </tr>  <tr>
-                    <td>Martins</td>
-                    <td>martins@gmail.com</td>
-                    <td>98-989821231</td>
-                    <td><a href="#">Editar</a> / <a href="#">Excluir</a></td>
-                </tr>  <tr>
-                    <td>Martins</td>
-                    <td>martins@gmail.com</td>
-                    <td>98-989821231</td>
-                    <td><a href="#">Editar</a> / <a href="#">Excluir</a></td>
-                </tr>  <tr>
-                    <td>Martins</td>
-                    <td>martins@gmail.com</td>
-                    <td>98-989821231</td>
-                    <td><a href="#">Editar</a> / <a href="#">Excluir</a></td>
-                </tr>  <tr>
-                    <td>Martins</td>
-                    <td>martins@gmail.com</td>
-                    <td>98-989821231</td>
-                    <td><a href="#">Editar</a> / <a href="#">Excluir</a></td>
-                </tr>  <tr>
-                    <td>Martins</td>
-                    <td>martins@gmail.com</td>
-                    <td>98-989821231</td>
-                    <td><a href="#">Editar</a> / <a href="#">Excluir</a></td>
                 </tr>  <tr>
                     <td>Martins</td>
                     <td>martins@gmail.com</td>
@@ -169,10 +67,6 @@
         </div>
         
     </div>
-    <div id="novoItem">
-           <a href="#">
-                <button> Novo Cadastro </button>
-           </a>
-        </div>
+    
 </body>
 </html>

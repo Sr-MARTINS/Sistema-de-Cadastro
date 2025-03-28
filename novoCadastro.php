@@ -1,3 +1,34 @@
+<?php
+    require_once("crud.php");
+
+    @$acao = $_GET["acao"];
+    @$id   = $_GET["id"];
+
+    if($acao != "") {
+
+        $sql = "SELECT * FROM cliente WHERE id_cliente = $id";
+        $qyr = executar($sql);
+        $linha = mysqli_fetch_array($qyr); 
+
+        $id_cliente = $linha["id_cliente"];
+        $nome       = $linha["nome"];
+        $email      = $linha["email"];
+        $telefone   = $linha["telefone"];
+
+        $dados = array (
+            "id_cliente" => "$id_cliente",
+            "id_cliente"
+             => "$id_cliente",
+            "id_cliente" => "$id_cliente",
+            "nome"       => "$nome",
+            "email"      => "$email",
+            "telefone"   => "$telefone",
+        );
+
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,70 +42,25 @@
     <hr>
 
     <div id="envep">
-    <form action="">
+    <form action="opCadastro.php" method="POST">
         <div id="boxForm">            
                 <label for="nome">Nome</label>
-                <input type="text" name="intName">
+                <input type="text" name="nome" value="<?php echo @$nome ?>" >
                 
                 <label for="email">Email</label>
-                <input type="text" name="intEmail">
+                <input type="text" name="email" value="<?php echo @$email ?>" >
                 
-                <label for="bairro">Bairro</label>
-                <input type="text" name="intBairro">
-                
-                <label for="endereco">Endereço</label>
-                <input type="text" name="intEndereco">
-                
-                <label for="cidade">Cidade</label>
-                <input type="text" name="intCity">
+                <label for="email">Telefone</label> 
+                <input type="number" name="telefone" value="<?php echo @$nome ?>">
 
+                <input type="test" name="acao" value="<?php if($acao == "") echo "Cadastrar"; else echo $acao ?>">
+                <input type="test" name="id" value="<?php echo @$id ?>">
         </div> 
-        <div id="subBox">
-            <div class="outBox">
-                <label for="cep">CEP :</label>
-                <input type="number" name="intCep">
-            </div>
-
-            <div class="outBox">
-                <label for="uf">UF :</label>
-                <input type="number" name="intUf">
-            </div>
-                    
-            <div class="outBox">
-                <label for="sexo">SEXO :</label>
-                <input type="check" name="intUf">
-            </div>                    
-
-            <div class="outBox">
-                <label for="telefone">TELEFONE :</label>
-                <input type="number" name="intUf">
-            </div>
-                  
-            <div class="outBox">
-                <label for="cpf">CPF :</label>
-                <input type="number" name="intUf">
-            </div>            
-        
-            <div class="outBox">
-                <label for="rg">RG :</label>
-                <input type="number" name="intUf">
-            </div>
-        </div>
-        <div id="descricao">
-            <label for="descricao">Descricao</label>
-            <textarea name="" id=""></textarea>
-        </div>
         <div id="buttns">
-            <a href="#">
-                <button type="submit" class="btn btn-success">
-                    Cadastrar
-                </button>
-            </a>
-            <a href="#">
-                <button type="submit" class="btn btn-secondary">
-                    Limpar
-                </button>
-            </a>
+            <input type="submit" name="btEnviar" class="btn btn-success" 
+                value="<?php if($acao == "") echo "Cadastrar"; else echo $acao ?>" >
+
+            <input type="reset" name="Reset" class="btn btn-secondary">
         </div>
     </form>
     </div>

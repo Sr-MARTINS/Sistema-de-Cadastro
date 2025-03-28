@@ -1,3 +1,13 @@
+<?php
+    require_once("crud.php");
+
+    if(isset($_POST["btDelete"])) {
+        // $id_cliente = $_POST["id_cliente"];
+
+        $deletar = delete("cliente", "id_cliente = ") .$_POST["id_cliente"] ;
+    
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,30 +31,25 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Martins</td>
-                    <td>martins@gmail.com</td>
-                    <td>98-989821231</td>
-                    <td><a href="#">Excluir</a></td>
-                </tr>
-                <tr>
-                    <td>Martins</td>
-                    <td>martins@gmail.com</td>
-                    <td>98-989821231</td>
-                    <td><a href="#">Excluir</a></td>
-                </tr>  
-                <tr>
-                    <td>Martins</td>
-                    <td>martins@gmail.com</td>
-                    <td>98-989821231</td>
-                    <td><a href="#">Excluir</a></td>
-                </tr>  
-                <tr>
-                    <td>Martins</td>
-                    <td>martins@gmail.com</td>
-                    <td>98-989821231</td>
-                    <td><a href="#">Excluir</a></td>
-                </tr>  
+                <?php
+                    $sql = "SELECT * FROM cliente";
+                    $qyr = executar($sql);
+
+                    while($linha = mysqli_fetch_array($qyr)) {
+                ?>
+                    <tr>
+                        <td><?php echo $linha["id_cliente"]  ?></td>
+                        <td><?php echo $linha["nome"]  ?></td>
+                        <td><?php echo $linha["email"] ?></td>
+                        <td><?php echo $linha["telefone"]  ?></td>
+                        <td>
+                            <form method="POST">
+                                <input type="hidden" value="id_cliente" value="<?php echo $linha["id_cliente"] ?> ">
+                                <button type="submit" name="btDelete">Excluir</button>
+                            </form>
+                        </td>
+                    </tr>  
+                <?php } ?>
                   
             </tbody>
             </table>

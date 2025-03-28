@@ -1,3 +1,7 @@
+<?php
+    require_once("crud.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +40,7 @@
                 <li class="option"><a href="index.php?link=2"> <i class="bi bi-journals"></i>Novo Cadastro</a></li>
                 <li class="option"><a href="index.php?link=3"> <i class="bi bi-pencil-square"></i>Alterar</a></li>
                 <li class="option"><a href="index.php?link=4"> <i class="bi bi-trash"></i> Deletar</a></li>
-                <li class="option"><a href=""> <i class="bi bi-list-task"></i>Lista</a></li>
+                <li class="option"><a href="index.php?link=5"> <i class="bi bi-list-task"></i>Lista</a></li>
             </ul>  
         </div>
 
@@ -50,10 +54,11 @@
                 $pag["2"] = "novoCadastro.php";
                 $pag["3"] = "editar.php";
                 $pag["4"] = "deletar.php";
+                $pag["5"] = "lista.php";
             
                 if(!empty($link)) {
-                    if(file_exists($pag[$link])) {
-                        include $pag[$link];
+                    if(file_exists($pag["$link"])) {
+                        include $pag["$link"];
                     }else {
                         include "home.php";
                     }
